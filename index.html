@@ -159,15 +159,12 @@ body:has(#main.opened) .watercolor-wash:after{background:radial-gradient(ellipse
 </main>
 <audio id="music" preload="auto" autoplay playsinline></audio>
 <script>window.__weddingAudioParts=[];</script>
-<script src="assets/music-1.js"></script>
-<script src="assets/music-2.js"></script>
-<script src="assets/music-3.js"></script>
-<script src="assets/music-4.js"></script>
-<script src="assets/music-5.js"></script>
-<script src="assets/music-6.js"></script>
-<script src="assets/music-7.js"></script>
-<script src="assets/music-8.js"></script>
-<script>if(window.__weddingAudioParts.length===8){document.getElementById("music").src="data:audio/mpeg;base64,"+window.__weddingAudioParts.join("");}delete window.__weddingAudioParts;</script>
+<script src="assets/violin-1.js"></script>
+<script src="assets/violin-2.js"></script>
+<script src="assets/violin-3.js"></script>
+<script src="assets/violin-4.js"></script>
+<script src="assets/violin-5.js"></script>
+<script>if(window.__weddingAudioParts.length===5){document.getElementById("music").src="data:audio/mpeg;base64,"+window.__weddingAudioParts.join("");}delete window.__weddingAudioParts;</script>
 <button class="sound" id="sound" hidden aria-label="Play music">♪ Play music</button>
 <script>
 (()=>{'use strict';const $=id=>document.getElementById(id),main=$('main'),audio=$('music'),sound=$('sound');let opened=false,opening=false,hasPlayed=false,userPaused=false;audio.volume=.55;
