@@ -249,6 +249,16 @@ body:has(#main.opened) .watercolor-landscape:after{background:none}
  #main.opened .date{margin:4px 0}
 }
 
+
+/* Mobile review: lower the action group and match location/countdown to the names. */
+@media(max-width:759px) and (orientation:portrait){
+ #main.opened{padding-bottom:max(26px,calc(env(safe-area-inset-bottom) + 10px))}
+ #main.opened .wedding-location,
+ #main.opened #countLabel,
+ #main.opened .count strong,
+ #main.opened .count small{color:#765347}
+}
+
 </style>
 </head>
 <body>
