@@ -218,6 +218,37 @@ body:has(#main.opened) .watercolor-landscape:after{background:none}
 @media(min-width:760px) and (max-height:850px){.envelope-title{font-size:49px}}
 @media(max-width:480px){.cover-monogram{line-height:1.12}.envelope-title{font-size:35px}}
 
+
+/* Mobile second page: spread wedding details and de-emphasize the countdown. */
+@media(max-width:759px) and (orientation:portrait){
+ #main.opened{padding:6px 16px max(54px,env(safe-area-inset-bottom));height:auto;min-height:100svh}
+ #main.opened header{margin-bottom:5px}
+ #main.opened .stage{flex:1;min-height:0}
+ #main.opened .panel{flex:1;justify-content:space-between;gap:0}
+ #main.opened .invitation-details{padding-bottom:0}
+ #main.opened .names{margin-top:clamp(24px,7.5svh,68px);margin-bottom:12px}
+ #main.opened .line{margin:8px 0}
+ #main.opened .date{margin-top:7px;margin-bottom:5px}
+ #main.opened .wedding-location{margin-top:5px;margin-bottom:0}
+ #main.opened .invitation-actions{padding:0;margin-top:clamp(24px,8svh,72px)}
+ #main.opened #countLabel{font-size:8px;letter-spacing:.16em}
+ #main.opened .count{width:min(100%,242px);gap:5px;margin:5px auto 7px}
+ #main.opened .count div{padding:4px 2px;min-width:0;border-radius:4px;background:#fffaf4d6}
+ #main.opened .count strong{font-size:18px;line-height:1.05}
+ #main.opened .count small{font-size:7px;letter-spacing:.08em;margin-top:2px}
+ #main.opened .calendar{min-height:44px;padding:8px 16px;font-size:10px}
+ #main.opened .formal{margin-top:6px;font-size:12px}
+ #main.opened .wedding-hashtag{margin-top:4px;font-size:11px}
+ body:has(#main.opened) .full-portrait-backdrop{background-position:center 35%}
+ body:has(#main.opened) .watercolor-landscape:after{background:linear-gradient(180deg,#faf7eff5 0%,#faf7efdc 20%,#faf7efb8 36%,#faf7ef40 48%,transparent 58%,transparent 67%,#faf7ef55 77%,#faf7efd9 88%,#faf7ef 100%)}
+}
+@media(max-width:759px) and (orientation:portrait) and (max-height:540px){
+ #main.opened .names{margin-top:18px;margin-bottom:7px}
+ #main.opened .line{margin:5px 0}
+ #main.opened .invitation-actions{margin-top:15px}
+ #main.opened .date{margin:4px 0}
+}
+
 </style>
 </head>
 <body>
