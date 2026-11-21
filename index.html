@@ -273,6 +273,18 @@ body:has(#main.opened) .watercolor-landscape:after{background:none}
 }
 @media(max-width:480px){.blessing{font-size:12px}}
 
+
+/* Mobile: raise only the marked names/date/location block, preserving its flow space. */
+@media(max-width:759px) and (orientation:portrait){
+ #main.opened .invitation-details > .names,
+ #main.opened .invitation-details > .line,
+ #main.opened .invitation-details > #inviteWeekday,
+ #main.opened .invitation-details > #inviteDate,
+ #main.opened .invitation-details > .wedding-location{
+  transform:translateY(calc(-1 * clamp(12px,3svh,24px)));
+ }
+}
+
 </style>
 </head>
 <body>
