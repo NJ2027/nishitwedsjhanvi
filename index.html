@@ -49,7 +49,9 @@ body:has(#main.opened) .watercolor-wash:after{background:radial-gradient(ellipse
 .portrait{border:0;border-radius:0;box-shadow:none;background:transparent}
 .portrait:after{display:none}
 .portrait img{object-fit:cover;object-position:50% 85%;mix-blend-mode:multiply;mask-image:linear-gradient(to right,transparent,#000 5%,#000 95%,transparent),linear-gradient(to bottom,transparent,#000 5%,#000 95%,transparent);mask-composite:intersect}
-#envelopeGraphic{filter:url(#waterPaper)}
+#envelopeGraphic>rect,#envelopeGraphic>path{filter:url(#waterPaper)}
+/* The inner stationery stays crisp throughout the opening animation. */
+#envelopeGraphic .letter{filter:none}
 @media(max-width:760px){.watercolor-wash{background-size:cover;background-position:50% 50%;opacity:.64}.watercolor-wash:after{background:radial-gradient(ellipse at 50% 48%,rgba(250,247,239,.85) 0%,rgba(250,247,239,.58) 40%,rgba(250,247,239,.28) 100%)}body:has(#main.opened) .watercolor-wash{opacity:.41}body:has(#main.opened) .watercolor-wash:after{background:rgba(250,247,239,.52)}}
 
 /* Opened invitation: fit the portrait and full details in one screen.
@@ -224,7 +226,7 @@ body:has(#main.opened) .watercolor-landscape:after{background:none}
 <div class="cover-monogram" aria-label="N and J">N <span>&amp;</span> J</div>
 <p class="envelope-kicker">A little surprise, sealed with love</p><h1 class="envelope-title" id="envelopeTitle">You've got a letter.</h1>
 <svg class="envelope-scene" id="scene" viewBox="-55 0 770 330" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-<defs><filter id="waterPaper" x="-5%" y="-6%" width="110%" height="112%" color-interpolation-filters="sRGB"><feTurbulence type="fractalNoise" baseFrequency=".021 .045" numOctaves="4" seed="8" result="grain"/><feDisplacementMap in="SourceGraphic" in2="grain" scale="2.6" xChannelSelector="R" yChannelSelector="G" result="rough"/><feColorMatrix in="grain" type="matrix" values="0 0 0 0 .45 0 0 0 0 .30 0 0 0 0 .14 0 0 0 .32 -.12" result="pigment"/><feComposite in="pigment" in2="rough" operator="in" result="texture"/><feBlend in="rough" in2="texture" mode="multiply"/></filter><linearGradient id="paper" x2=".7" y2="1"><stop stop-color="#fffaf0"/><stop offset="1" stop-color="#e7cfac"/></linearGradient><linearGradient id="fur" x2="0" y2="1"><stop stop-color="#fae1ab"/><stop offset=".65" stop-color="#e1b171"/><stop offset="1" stop-color="#c78e4c"/></linearGradient><linearGradient id="ear" x2="0" y2="1"><stop stop-color="#e1b171"/><stop offset="1" stop-color="#b77d43"/></linearGradient><filter id="shadow"><feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#6d4d2c" flood-opacity=".15"/></filter></defs>
+<defs><filter id="waterPaper" x="-5%" y="-6%" width="110%" height="112%" color-interpolation-filters="sRGB"><feTurbulence type="fractalNoise" baseFrequency=".45" numOctaves="2" seed="8" result="grain"/><feColorMatrix in="grain" type="matrix" values="0 0 0 0 .55 0 0 0 0 .43 0 0 0 0 .26 0 0 0 .07 -.015" result="pigment"/><feComposite in="pigment" in2="SourceGraphic" operator="in" result="texture"/><feBlend in="SourceGraphic" in2="texture" mode="multiply"/></filter><linearGradient id="paper" x2=".7" y2="1"><stop stop-color="#fffaf0"/><stop offset="1" stop-color="#e7cfac"/></linearGradient><linearGradient id="fur" x2="0" y2="1"><stop stop-color="#fae1ab"/><stop offset=".65" stop-color="#e1b171"/><stop offset="1" stop-color="#c78e4c"/></linearGradient><linearGradient id="ear" x2="0" y2="1"><stop stop-color="#e1b171"/><stop offset="1" stop-color="#b77d43"/></linearGradient><filter id="shadow"><feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#6d4d2c" flood-opacity=".15"/></filter></defs>
 <ellipse cx="330" cy="300" rx="235" ry="13" fill="#87674c" opacity=".09"/>
 <g class="envelope-click" id="envelopeGraphic">
 <rect x="112" y="79" width="436" height="213" rx="7" fill="#e7d1b1" stroke="#ab8a66" filter="url(#shadow)"/>
