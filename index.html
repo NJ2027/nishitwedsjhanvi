@@ -285,6 +285,15 @@ body:has(#main.opened) .watercolor-landscape:after{background:none}
  }
 }
 
+
+/* Third guest date variant. Only its long date is scaled to fit small screens. */
+#main.opened.invite-all .date{font-size:clamp(24px,3.4vw,42px);white-space:nowrap}
+#main.opened.invite-all #inviteWeekday{white-space:nowrap;letter-spacing:.14em}
+@media(max-width:759px) and (orientation:portrait){
+ #main.opened.invite-all .date{font-size:clamp(19px,5.45vw,27px);letter-spacing:-.02em}
+ #main.opened.invite-all #inviteWeekday{font-size:clamp(8px,2.35vw,10px);letter-spacing:.10em}
+}
+
 </style>
 </head>
 <body>
@@ -329,7 +338,7 @@ body:has(#main.opened) .watercolor-landscape:after{background:none}
 <button class="calendar open-letter" id="openLetter">Open our letter &nbsp; ✧</button><p class="envelope-note">A special delivery from our little best friend.</p><p class="opening-status" id="openingStatus" role="status"></p></section>
 <div class="stage" id="mainStage" hidden>
 <div><div class="portrait" id="portrait"><img src="assets/autumn-watercolor-portrait.jpg" alt="Watercolor portrait of Nishit and Jhanvi walking hand in hand through an autumn park" fetchpriority="high" onerror="this.style.visibility='hidden'"></div></div>
-<section class="panel" id="panel" aria-labelledby="names" hidden><div class="invitation-details"><div class="eyebrow save-date-heading">Save The Date</div><p class="message save-date-tagline">As we celebrate their beginning of forever</p><h1 class="names" id="names" tabindex="-1">Nishit <span>&amp;</span> Jhanvi</h1><div class="line"></div><p class="eyebrow" id="inviteWeekday">Friday</p><h2 class="date" id="inviteDate">May 7, 2027</h2><p class="wedding-location">New Jersey</p></div><div class="invitation-actions"><div class="eyebrow" id="countLabel">Counting down to forever</div><div class="count" aria-label="Countdown to May 7, 2027 at 6 PM Eastern time"><div><strong id="days">–</strong><small>DAYS</small></div><div><strong id="hours">–</strong><small>HOURS</small></div><div><strong id="minutes">–</strong><small>MINS</small></div><div><strong id="seconds">–</strong><small>SECS</small></div></div><button class="calendar" id="calendar" aria-expanded="false" aria-controls="choices">＋ Add to calendar</button><div class="choices" id="choices" hidden><a id="google" target="_blank" rel="noopener noreferrer">Google Calendar ↗</a><a id="outlook" target="_blank" rel="noopener noreferrer">Outlook Calendar ↗</a><a id="google9" target="_blank" rel="noopener noreferrer" hidden>Google · May 9 ↗</a><a id="outlook9" target="_blank" rel="noopener noreferrer" hidden>Outlook · May 9 ↗</a><a id="ics" download="Nishit-and-Jhanvi.ics" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-%2F%2FNishit%20and%20Jhanvi%2F%2FSave%20the%20Date%2F%2FEN%0D%0ACALSCALE%3AGREGORIAN%0D%0AMETHOD%3APUBLISH%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A20270507-nishit-jhanvi%40save-the-date%0D%0ADTSTAMP%3A20261119T000000Z%0D%0ADTSTART%3A20270507T220000Z%0D%0ADTEND%3A20270508T030000Z%0D%0ASUMMARY%3ANishit%20%26%20Jhanvi%20-%20Wedding%20Celebration%0D%0ALOCATION%3ANew%20Jersey%0D%0ADESCRIPTION%3ASave%20the%20date.%20Formal%20invitation%20to%20follow.%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR%0D%0A">Apple Calendar / Download .ics</a></div><p class="formal">Formal invitation to follow.</p><p class="wedding-hashtag">#NJinNJ</p></div></section>
+<section class="panel" id="panel" aria-labelledby="names" hidden><div class="invitation-details"><div class="eyebrow save-date-heading">Save The Date</div><p class="message save-date-tagline">As we celebrate their beginning of forever</p><h1 class="names" id="names" tabindex="-1">Nishit <span>&amp;</span> Jhanvi</h1><div class="line"></div><p class="eyebrow" id="inviteWeekday">Friday</p><h2 class="date" id="inviteDate">May 7, 2027</h2><p class="wedding-location">New Jersey</p></div><div class="invitation-actions"><div class="eyebrow" id="countLabel">Counting down to forever</div><div class="count" aria-label="Countdown to May 7, 2027 at 6 PM Eastern time"><div><strong id="days">–</strong><small>DAYS</small></div><div><strong id="hours">–</strong><small>HOURS</small></div><div><strong id="minutes">–</strong><small>MINS</small></div><div><strong id="seconds">–</strong><small>SECS</small></div></div><button class="calendar" id="calendar" aria-expanded="false" aria-controls="choices">＋ Add to calendar</button><div class="choices" id="choices" hidden><a id="google" target="_blank" rel="noopener noreferrer">Google Calendar ↗</a><a id="outlook" target="_blank" rel="noopener noreferrer">Outlook Calendar ↗</a><a id="google8" target="_blank" rel="noopener noreferrer" hidden>Google · May 8 ↗</a><a id="outlook8" target="_blank" rel="noopener noreferrer" hidden>Outlook · May 8 ↗</a><a id="google9" target="_blank" rel="noopener noreferrer" hidden>Google · May 9 ↗</a><a id="outlook9" target="_blank" rel="noopener noreferrer" hidden>Outlook · May 9 ↗</a><a id="ics" download="Nishit-and-Jhanvi.ics" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-%2F%2FNishit%20and%20Jhanvi%2F%2FSave%20the%20Date%2F%2FEN%0D%0ACALSCALE%3AGREGORIAN%0D%0AMETHOD%3APUBLISH%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A20270507-nishit-jhanvi%40save-the-date%0D%0ADTSTAMP%3A20261119T000000Z%0D%0ADTSTART%3A20270507T220000Z%0D%0ADTEND%3A20270508T030000Z%0D%0ASUMMARY%3ANishit%20%26%20Jhanvi%20-%20Wedding%20Celebration%0D%0ALOCATION%3ANew%20Jersey%0D%0ADESCRIPTION%3ASave%20the%20date.%20Formal%20invitation%20to%20follow.%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR%0D%0A">Apple Calendar / Download .ics</a></div><p class="formal">Formal invitation to follow.</p><p class="wedding-hashtag">#NJinNJ</p></div></section>
 </div><p id="status" class="status" role="status"></p>
 </main>
 <audio id="music" preload="auto" autoplay playsinline></audio>
@@ -395,6 +404,17 @@ if(inviteBoth){
  $('inviteWeekday').textContent='Friday & Sunday';
  document.querySelector('meta[name="description"]').content='Nishit & Jhanvi — Save the Date, May 7th & 9th, 2027.';
 }
+
+const inviteAll=new URLSearchParams(window.location.search).get('invite')==='may789';
+if(inviteAll){
+ const displayedDate='May 7th, 8th & 9th, 2027';
+ main.classList.add('invite-all');
+ $('letterDate').textContent=displayedDate;
+ $('letterDate').setAttribute('font-size','16');
+ $('inviteDate').textContent=displayedDate;
+ $('inviteWeekday').textContent='Friday, Saturday & Sunday';
+ document.querySelector('meta[name="description"]').content='Nishit & Jhanvi — Save the Date, May 7th, 8th & 9th, 2027.';
+}
 const title='Nishit & Jhanvi — Wedding Celebration',description='Save the date. Formal invitation to follow.';$('google').href='https://calendar.google.com/calendar/render?'+new URLSearchParams({action:'TEMPLATE',text:title,dates:'20270507T220000Z/20270508T030000Z',ctz:'America/New_York',location:'New Jersey',details:description});$('outlook').href='https://outlook.live.com/calendar/0/deeplink/compose?'+new URLSearchParams({path:'/calendar/action/compose',rru:'addevent',subject:title,startdt:'2027-05-07T22:00:00Z',enddt:'2027-05-08T03:00:00Z',allday:'false',location:'New Jersey',body:description});
 if(inviteBoth){
  const sundayTitle='Nishit & Jhanvi — Wedding Day';
@@ -413,6 +433,31 @@ if(inviteBoth){
  $('ics').href='data:text/calendar;charset=utf-8,'+encodeURIComponent(icsLines.join('\r\n'));
  $('ics').download='Nishit-and-Jhanvi-May-7-and-9.ics';
  $('ics').textContent='Apple Calendar / Download both dates (.ics)';
+}
+
+if(inviteAll){
+ const haldiTitle='Nishit & Jhanvi — Haldi Ceremony';
+ const weddingTitle='Nishit & Jhanvi — Wedding Day';
+ $('choices').classList.add('dual-dates');
+ $('google').textContent='Google · May 7 ↗';
+ $('outlook').textContent='Outlook · May 7 ↗';
+ $('google8').hidden=false;
+ $('outlook8').hidden=false;
+ $('google9').hidden=false;
+ $('outlook9').hidden=false;
+ $('google8').href='https://calendar.google.com/calendar/render?'+new URLSearchParams({action:'TEMPLATE',text:haldiTitle,dates:'20270508T140000Z/20270508T180000Z',ctz:'America/New_York',location:'New Jersey',details:description});
+ $('outlook8').href='https://outlook.live.com/calendar/0/deeplink/compose?'+new URLSearchParams({path:'/calendar/action/compose',rru:'addevent',subject:haldiTitle,startdt:'2027-05-08T14:00:00Z',enddt:'2027-05-08T18:00:00Z',allday:'false',location:'New Jersey',body:description});
+ $('google9').href='https://calendar.google.com/calendar/render?'+new URLSearchParams({action:'TEMPLATE',text:weddingTitle,dates:'20270509T130000Z/20270509T190000Z',ctz:'America/New_York',location:'New Jersey',details:description});
+ $('outlook9').href='https://outlook.live.com/calendar/0/deeplink/compose?'+new URLSearchParams({path:'/calendar/action/compose',rru:'addevent',subject:weddingTitle,startdt:'2027-05-09T13:00:00Z',enddt:'2027-05-09T19:00:00Z',allday:'false',location:'New Jersey',body:description});
+ // Three separate events, with their respective local New Jersey times in May (EDT).
+ const icsLines=[
+ 'BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Nishit and Jhanvi//Save the Date//EN','CALSCALE:GREGORIAN','METHOD:PUBLISH',
+ 'BEGIN:VEVENT','UID:20270507-nishit-jhanvi@save-the-date','DTSTAMP:20261124T000000Z','DTSTART:20270507T220000Z','DTEND:20270508T030000Z','SUMMARY:Nishit & Jhanvi - Wedding Celebration','LOCATION:New Jersey','DESCRIPTION:Save the date. Formal invitation to follow.','END:VEVENT',
+ 'BEGIN:VEVENT','UID:20270508-nishit-jhanvi@save-the-date','DTSTAMP:20261124T000000Z','DTSTART:20270508T140000Z','DTEND:20270508T180000Z','SUMMARY:Nishit & Jhanvi - Haldi Ceremony','LOCATION:New Jersey','DESCRIPTION:Save the date. Formal invitation to follow.','END:VEVENT',
+ 'BEGIN:VEVENT','UID:20270509-nishit-jhanvi@save-the-date','DTSTAMP:20261124T000000Z','DTSTART:20270509T130000Z','DTEND:20270509T190000Z','SUMMARY:Nishit & Jhanvi - Wedding Day','LOCATION:New Jersey','DESCRIPTION:Save the date. Formal invitation to follow.','END:VEVENT','END:VCALENDAR',''];
+ $('ics').href='data:text/calendar;charset=utf-8,'+encodeURIComponent(icsLines.join('\r\n'));
+ $('ics').download='Nishit-and-Jhanvi-May-7-8-and-9.ics';
+ $('ics').textContent='Apple Calendar / Download all 3 dates (.ics)';
 }
 $('calendar').addEventListener('click',()=>{const c=$('choices');c.hidden=!c.hidden;$('calendar').setAttribute('aria-expanded',String(!c.hidden))});
 })();
